@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 // components
-import { Layout } from "components";
+import { Layout, ThemeProvider } from "components";
 
 // styles
 import "styles/globals.css";
@@ -27,7 +27,14 @@ const RootLayout = ({
       </head>
 
       <body className={inter.className}>
-        <Layout>{children}</Layout>
+        <ThemeProvider
+          enableSystem
+          attribute="class"
+          defaultTheme="system"
+          disableTransitionOnChange
+        >
+          <Layout>{children}</Layout>
+        </ThemeProvider>
       </body>
     </html>
   );
