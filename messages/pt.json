@@ -10,6 +10,12 @@
     "title": "Transcreva vídeos gratuitamente",
     "description": "Sistema de transcrição de vídeos do Youtube alimentado por inteligência artificial",
     "button": "Iniciar transcrição",
-    "subtitle": "Simples e rápido"
+    "subtitle": "Simples e rápido",
+    "fast": "Veloz",
+    "fastDescription": "Transcreva seus vídeos de forma ágil com e prática.",
+    "efficient": "Eficiente",
+    "efficientDescription": "Uma ferramenta simples que entrega o que promete com total eficiência.",
+    "free": "Gratuito",
+    "freeDescription": "Sem custos, sem limites, sem pegadinhas. Totalmente gratuito."
   }
 }

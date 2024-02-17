@@ -8,7 +8,7 @@ type BenefitCardProps = {
 
 const BenefitCard = ({ icon, title, description }: BenefitCardProps) => {
   return (
-    <div className="w-[262px] h-[164px] rounded-[8px] bg-[#150d1ad3] p-[16px]">
+    <div className="w-[262px] h-[164px] rounded-[8px] bg-[#150d1ab6] p-[16px]">
       <div className="flex items-center gap-2 mb-[10px]">
         <div className="w-[38px] h-[38px] flex items-center justify-center rounded-full bg-[#311051be]">
           {icon}
