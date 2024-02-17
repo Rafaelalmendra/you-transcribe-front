@@ -5,7 +5,17 @@ import { useTranslations } from "next-intl";
 import { BenefitsMock } from "mocks";
 
 // components
-import { BenefitCard, Button, GithubLinks, Input } from "components";
+import {
+  Input,
+  Button,
+  GithubLinks,
+  BenefitCard,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "components";
 
 // icons
 import { PlayCircle } from "lucide-react";
@@ -15,31 +25,34 @@ const HomeView = () => {
   const benefitsMock = BenefitsMock();
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
-      <h1 className="text-[3.5rem] font-bold text-[#FAFAFA] mb-1">
+    <div className="h-screen flex flex-col items-center justify-center px-4 xl:px-0">
+      <h1 className="text-[2rem] lg:text-[3.5rem] text-center font-bold text-[#FAFAFA] mb-1">
         {t("title")}
       </h1>
 
-      <p className="max-w-[651px] text-center text-[24px] text-[#A1A1AA] mb-5">
+      <p className="max-w-auto lg:max-w-[651px] text-center text-[16px] lg:text-[1.5rem] text-[#A1A1AA] mb-5">
         {t("description")}
       </p>
 
       <GithubLinks hasText />
 
-      <div className="flex items-center gap-2 mt-[26px]">
+      <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-2 mt-[26px]">
         <Input
           placeholder="Adicione a URL do vídeo aqui"
-          className="w-[410px] h-[40px]"
+          className="w-full lg:w-[410px] h-[40px]"
         />
-        <Button className="font-medium bg-gradient-to-r from-[#3AC4E2] to-[#E4EBC7] text-[#09090B] gap-[10px]">
+
+        <Button className="w-full lg:w-auto font-medium bg-gradient-to-r from-[#3AC4E2] to-[#E4EBC7] text-[#09090B] gap-[10px]">
           <PlayCircle size={20} />
           {t("button")}
         </Button>
       </div>
 
-      <p className="mt-[30px] text-[#A1A1AA]">🎉 {t("subtitle")}</p>
+      <p className="mt-[30px] text-sm lg:text-base text-[#A1A1AA]">
+        🎉 {t("subtitle")}
+      </p>
 
-      <div className="grid grid-cols-3 gap-[54px] mt-[104px]">
+      <div className="hidden lg:grid grid-cols-3 gap-[54px] mt-[6.5rem]">
         {benefitsMock.map((item) => (
           <BenefitCard
             key={item.id}
@@ -49,6 +62,22 @@ const HomeView = () => {
           />
         ))}
       </div>
+
+      <Carousel className="max-w-xs lg:hidden mt-[2.625rem] px-4">
+        <CarouselContent>
+          {benefitsMock.map((item) => (
+            <CarouselItem key={item.id}>
+              <BenefitCard
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="pl-4" />
+        <CarouselNext className="pr-4" />
+      </Carousel>
 
       <div className="absolute z-[-1] w-full h-full">
         <Image fill src="/images/bg-vector.svg" alt="Vector background" />

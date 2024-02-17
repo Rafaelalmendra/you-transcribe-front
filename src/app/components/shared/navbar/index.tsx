@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav
       className={`fixed w-full h-[4.75rem] flex items-center justify-center border-b-[1px] border-[${borderColor}]`}
     >
-      <div className="max-w-[1280px] w-full flex items-center justify-between px-4 lg:px-0">
+      <div className="max-w-[1280px] w-full flex items-center justify-between px-4 xl:px-0">
         <Link href="/">
           <Image
             priority
