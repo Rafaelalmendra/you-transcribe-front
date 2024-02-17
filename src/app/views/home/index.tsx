@@ -1,13 +1,35 @@
 import { useTranslations } from "next-intl";
 
 // components
-import { Button, GithubLinks, Input } from "components";
+import { BenefitCard, Button, GithubLinks, Input } from "components";
 
 // icons
-import { PlayCircle } from "lucide-react";
+import { BadgeCheck, CircleDollarSign, PlayCircle, Rocket } from "lucide-react";
 
 const HomeView = () => {
   const t = useTranslations("Home");
+
+  const benefitsMock = [
+    {
+      id: 1,
+      icon: <Rocket size={18} />,
+      title: "Veloz",
+      description: "Transcreva seus vídeos de forma ágil com e prática.",
+    },
+    {
+      id: 2,
+      icon: <BadgeCheck size={18} />,
+      title: "Eficiente",
+      description:
+        "Uma ferramenta simples que entrega o que promete com total eficiência.",
+    },
+    {
+      id: 3,
+      icon: <CircleDollarSign size={18} />,
+      title: "Gratuito",
+      description: "Utilize o sistema de forma 100% gratuita e sem pegadinhas.",
+    },
+  ];
 
   return (
     <div className="h-screen flex flex-col items-center justify-center">
@@ -33,6 +55,17 @@ const HomeView = () => {
       </div>
 
       <p className="mt-[30px] text-[#A1A1AA]">🎉 {t("subtitle")}</p>
+
+      <div className="grid grid-cols-3 gap-[54px] mt-[94px]">
+        {benefitsMock.map((item) => (
+          <BenefitCard
+            key={item.id}
+            icon={item.icon}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </div>
     </div>
   );
 };
