@@ -25,12 +25,12 @@ const HomeView = () => {
   const benefitsMock = BenefitsMock();
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center px-4 xl:px-0">
-      <h1 className="text-[2rem] lg:text-[3.5rem] text-center font-bold text-[#FAFAFA] mb-1">
+    <div className="h-screen flex flex-col items-center justify-center px-4 xl:px-0 pt-12 2xl:pt-0">
+      <h1 className="text-[2rem] lg:text-[3.5rem] text-center font-bold light:text-[#09090B] dark:text-[#FAFAFA] mb-1">
         {t("title")}
       </h1>
 
-      <p className="max-w-auto lg:max-w-[651px] text-center text-[16px] lg:text-[1.5rem] text-[#A1A1AA] mb-5">
+      <p className="max-w-auto lg:max-w-[651px] text-center text-[16px] lg:text-[1.5rem] light:text-[#71717A] dark:text-[#A1A1AA] mb-5">
         {t("description")}
       </p>
 
@@ -48,7 +48,7 @@ const HomeView = () => {
         </Button>
       </div>
 
-      <p className="mt-[30px] text-sm lg:text-base text-[#A1A1AA]">
+      <p className="mt-[30px] text-sm lg:text-base text-[#71717A] dark:text-[#A1A1AA]">
         🎉 {t("subtitle")}
       </p>
 
