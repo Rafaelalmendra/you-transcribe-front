@@ -8,6 +8,8 @@
   },
   "Home": {
     "title": "Transcreva vídeos gratuitamente",
-    "description": "Sistema de transcrição de vídeos do Youtube alimentado por inteligência artificial"
+    "description": "Sistema de transcrição de vídeos do Youtube alimentado por inteligência artificial",
+    "button": "Iniciar transcrição",
+    "subtitle": "Simples e rápido"
   }
 }
