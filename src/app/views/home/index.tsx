@@ -38,7 +38,7 @@ const HomeView = () => {
 
       <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-2 mt-[26px]">
         <Input
-          placeholder="Adicione a URL do vídeo aqui"
+          placeholder={t("buttonPlaceholder")}
           className="w-full lg:w-[410px] h-[40px]"
         />
 

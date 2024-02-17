@@ -10,6 +10,7 @@
     "title": "Transcribe videos for free",
     "description": "Youtube video transcription system powered by artificial intelligence",
     "button": "Start transcription",
+    "buttonPlaceholder": "Add video URL here",
     "subtitle": "Simple and fast",
     "fast": "Fast",
     "fastDescription": "Transcribe your videos quickly and easily.",
