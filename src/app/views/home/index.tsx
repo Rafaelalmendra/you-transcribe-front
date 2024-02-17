@@ -5,6 +5,7 @@ import { BenefitCard, Button, GithubLinks, Input } from "components";
 
 // icons
 import { BadgeCheck, CircleDollarSign, PlayCircle, Rocket } from "lucide-react";
+import Image from "next/image";
 
 const HomeView = () => {
   const t = useTranslations("Home");
@@ -65,6 +66,10 @@ const HomeView = () => {
             description={item.description}
           />
         ))}
+      </div>
+
+      <div className="absolute z-[-1] w-full h-full">
+        <Image fill src="/images/bg-vector.svg" alt="Vector background" />
       </div>
     </div>
   );
