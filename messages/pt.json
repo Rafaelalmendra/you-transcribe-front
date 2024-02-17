@@ -1,0 +1,11 @@
+{
+  "General": {
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "Home": {
+    "title": "Transcreva vídeos gratuitamente",
+    "description": "Sistema de transcrição de vídeos do Youtube alimentado por inteligência artificial"
+  }
+}

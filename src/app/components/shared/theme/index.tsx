@@ -1,6 +1,8 @@
 "use client";
-import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
+
+import { useTranslations } from "next-intl";
 import { type ThemeProviderProps } from "next-themes/dist/types";
+import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
 
 // components
 import {
@@ -20,6 +22,7 @@ const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
 
 const ThemeToggle = () => {
   const { setTheme } = useTheme();
+  const t = useTranslations("General");
 
   return (
     <DropdownMenu>
@@ -32,13 +35,13 @@ const ThemeToggle = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          {t("light")}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+          {t("dark")}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+          {t("system")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

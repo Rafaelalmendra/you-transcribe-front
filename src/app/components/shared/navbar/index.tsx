@@ -7,13 +7,15 @@ import { useTheme } from "next-themes";
 // components
 import {
   Button,
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
   ThemeToggle,
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
 } from "components";
-import { GitBranchPlus, Github, GithubIcon } from "lucide-react";
+
+// icons
+import { Github } from "lucide-react";
 
 const Navbar = () => {
   const { theme } = useTheme();
