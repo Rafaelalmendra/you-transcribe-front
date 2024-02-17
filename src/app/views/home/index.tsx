@@ -6,9 +6,8 @@ import { BenefitsMock } from "mocks";
 
 // components
 import {
-  Input,
-  Button,
   Carousel,
+  FormHome,
   GithubLinks,
   BenefitCard,
   CarouselItem,
@@ -16,9 +15,6 @@ import {
   CarouselContent,
   CarouselPrevious,
 } from "components";
-
-// icons
-import { PlayCircle } from "lucide-react";
 
 const HomeView = () => {
   const t = useTranslations("Home");
@@ -36,18 +32,7 @@ const HomeView = () => {
 
       <GithubLinks hasText />
 
-      <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-2 mt-[26px]">
-        <Input
-          type="url"
-          placeholder={t("buttonPlaceholder")}
-          className="w-full lg:w-[410px] h-[40px]"
-        />
-
-        <Button className="w-full lg:w-auto font-medium bg-gradient-to-r from-[#3AC4E2] to-[#E4EBC7] text-[#09090B] gap-[10px]">
-          <PlayCircle size={20} />
-          {t("button")}
-        </Button>
-      </div>
+      <FormHome />
 
       <p className="mt-[30px] text-sm lg:text-base text-[#71717A] dark:text-[#A1A1AA]">
         🎉 {t("subtitle")}

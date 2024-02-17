@@ -18,6 +18,8 @@
     "efficient": "Eficiente",
     "efficientDescription": "Uma ferramenta simples que entrega o que promete com total eficiência.",
     "free": "Gratuito",
-    "freeDescription": "Sem custos, sem limites, sem pegadinhas. Totalmente gratuito."
+    "freeDescription": "Sem custos, sem limites, sem pegadinhas. Totalmente gratuito.",
+    "emptyUrl": "Digite a URL do vídeo do Youtube",
+    "invalidUrl": "Digite uma URL do Youtube válida"
   }
 }

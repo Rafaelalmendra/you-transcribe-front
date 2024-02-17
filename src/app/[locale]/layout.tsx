@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 
 // components
-import { Layout, ThemeProvider } from "components";
+import { Layout, ThemeProvider, Toaster } from "components";
 
 // styles
 import "styles/globals.css";
@@ -48,6 +48,7 @@ const RootLayout = ({
             disableTransitionOnChange
           >
             <Layout>{children}</Layout>
+            <Toaster />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
