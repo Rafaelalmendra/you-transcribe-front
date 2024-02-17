@@ -4,7 +4,8 @@
     "dark": "Dark",
     "system": "System",
     "portuguese": "Portuguese",
-    "english": "English"
+    "english": "English",
+    "footer": "Developed by"
   },
   "Home": {
     "title": "Transcribe videos for free",

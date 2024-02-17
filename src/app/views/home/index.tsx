@@ -8,12 +8,12 @@ import { BenefitsMock } from "mocks";
 import {
   Input,
   Button,
+  Carousel,
   GithubLinks,
   BenefitCard,
-  Carousel,
-  CarouselContent,
   CarouselItem,
   CarouselNext,
+  CarouselContent,
   CarouselPrevious,
 } from "components";
 
@@ -38,6 +38,7 @@ const HomeView = () => {
 
       <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-2 mt-[26px]">
         <Input
+          type="url"
           placeholder={t("buttonPlaceholder")}
           className="w-full lg:w-[410px] h-[40px]"
         />
