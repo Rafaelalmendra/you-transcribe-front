@@ -2,7 +2,9 @@
   "General": {
     "light": "Light",
     "dark": "Dark",
-    "system": "System"
+    "system": "System",
+    "portuguese": "Portuguese",
+    "english": "English"
   },
   "Home": {
     "title": "Transcribe videos for free",

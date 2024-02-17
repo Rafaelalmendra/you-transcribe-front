@@ -21,7 +21,7 @@
         "name": "next"
       }
     ],
-    "baseUrl": "src/app"
+    "baseUrl": "src/app",
   },
   "include": [
     "next-env.d.ts",

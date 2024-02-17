@@ -5,21 +5,10 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 
 // components
-import {
-  Button,
-  ThemeToggle,
-  DropdownMenu,
-  DropdownMenuItem,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from "components";
-
-// icons
-import { Github } from "lucide-react";
+import { ThemeToggle, LanguageToggle, GithubLinks } from "components";
 
 const Navbar = () => {
   const { theme } = useTheme();
-
   const borderColor = theme === "light" ? "#878788" : "#27272A";
 
   return (
@@ -43,28 +32,8 @@ const Navbar = () => {
         </Link>
 
         <div className="flex items-center gap-3">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Github size={18} />
-                <span className="sr-only">Acessar Github</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <a
-                target="_blank"
-                href={process.env.NEXT_PUBLIC_GITHUB_FRONTEND_URL}
-              >
-                <DropdownMenuItem>Front-end</DropdownMenuItem>
-              </a>
-              <a
-                target="_blank"
-                href={process.env.NEXT_PUBLIC_GITHUB_BACKEND_URL}
-              >
-                <DropdownMenuItem>Back-end</DropdownMenuItem>
-              </a>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <GithubLinks />
+          <LanguageToggle />
 
           <ThemeToggle />
         </div>

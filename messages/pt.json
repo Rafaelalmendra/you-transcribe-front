@@ -2,7 +2,9 @@
   "General": {
     "light": "Claro",
     "dark": "Escuro",
-    "system": "Sistema"
+    "system": "Sistema",
+    "portuguese": "Português",
+    "english": "Inglês"
   },
   "Home": {
     "title": "Transcreva vídeos gratuitamente",
