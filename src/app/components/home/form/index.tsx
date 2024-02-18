@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { ChangeEvent } from "react";
 import { useTranslations } from "next-intl";
+import { useRouter } from "../../../../navigation";
 
 // hooks
 import { toast } from "hooks";
@@ -14,6 +15,7 @@ import { Input, Button } from "components";
 import { PlayCircle } from "lucide-react";
 
 const FormHome = () => {
+  const router = useRouter();
   const t = useTranslations("Home");
   const [inputValue, setInputValue] = useState("");
   const [valueIsValid, setValueIsValid] = useState(true);
@@ -39,7 +41,8 @@ const FormHome = () => {
       });
     }
 
-    console.log(inputValue);
+    const videoId = inputValue.split("v=")[1];
+    router.push(`/${videoId}`);
   };
 
   return (
