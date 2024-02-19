@@ -4,7 +4,12 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 
 // components
-import { Layout, ThemeProvider, Toaster } from "components";
+import {
+  Layout,
+  Toaster,
+  ThemeProvider,
+  ReactQueryClientProvider,
+} from "components";
 
 // styles
 import "styles/globals.css";
@@ -40,17 +45,19 @@ const RootLayout = ({
       </head>
 
       <body className={inter.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider
-            enableSystem
-            attribute="class"
-            defaultTheme="system"
-            disableTransitionOnChange
-          >
-            <Layout>{children}</Layout>
-            <Toaster />
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        <ReactQueryClientProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <ThemeProvider
+              enableSystem
+              attribute="class"
+              defaultTheme="system"
+              disableTransitionOnChange
+            >
+              <Layout>{children}</Layout>
+              <Toaster />
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </ReactQueryClientProvider>
       </body>
     </html>
   );
