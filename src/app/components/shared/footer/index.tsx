@@ -9,7 +9,7 @@ const Footer = ({ hasBackground }: FooterProps) => {
 
   return (
     <footer
-      className={`fixed bottom-0 w-full h-[4.75rem] flex items-center justify-center ${
+      className={`w-full h-[4.75rem] flex items-center justify-center ${
         hasBackground
           ? "bg-slate-100 dark:bg-[#09090B] shadow-2xl"
           : "transparent"

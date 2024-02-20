@@ -21,12 +21,12 @@ const HomeView = () => {
   const benefitsMock = BenefitsMock();
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center px-4 xl:px-0 pt-12 2xl:pt-0">
-      <h1 className="text-[2rem] lg:text-[3.5rem] text-center font-bold light:text-[#09090B] dark:text-[#FAFAFA] mb-1">
+    <div className="h-screen flex flex-col items-center justify-center px-4 xl:px-0">
+      <h1 className="text-[2rem] lg:text-[52px] text-center font-bold light:text-[#09090B] dark:text-[#FAFAFA] mb-[0.125rem]">
         {t("title")}
       </h1>
 
-      <p className="max-w-auto lg:max-w-[748px] text-center text-[16px] lg:text-[1.5rem] light:text-[#71717A] dark:text-[#A1A1AA] mb-5">
+      <p className="max-w-auto lg:max-w-[748px] text-center text-[16px] lg:text-[22px] light:text-[#71717A] dark:text-[#A1A1AA] mb-5">
         {t("description")}
       </p>
 
@@ -38,7 +38,7 @@ const HomeView = () => {
         🎉 {t("subtitle")}
       </p>
 
-      <div className="hidden lg:grid grid-cols-3 gap-[54px] mt-[6.5rem]">
+      <div className="hidden lg:grid grid-cols-3 gap-[54px] mt-[68px]">
         {benefitsMock.map((item) => (
           <BenefitCard
             key={item.id}
@@ -49,7 +49,7 @@ const HomeView = () => {
         ))}
       </div>
 
-      <Carousel className="max-w-xs lg:hidden mt-[2.625rem] px-4">
+      <Carousel className="max-w-xs lg:hidden mt-[42px] px-4">
         <CarouselContent>
           {benefitsMock.map((item) => (
             <CarouselItem key={item.id}>
