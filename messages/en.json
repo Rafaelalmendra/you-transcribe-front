@@ -9,8 +9,8 @@
     "loading": "Loading..."
   },
   "Home": {
-    "title": "Transcribe videos for free",
-    "description": "Youtube video transcription system powered by artificial intelligence",
+    "title": "Transcribing YouTube Videos with AI",
+    "description": "Get accurate and fast transcriptions for any YouTube video in just a few clicks",
     "button": "Start transcription",
     "buttonPlaceholder": "Add video URL here",
     "subtitle": "Simple and fast",

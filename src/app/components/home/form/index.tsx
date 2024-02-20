@@ -56,18 +56,18 @@ const FormHome = () => {
   };
 
   return (
-    <div className="w-[540px] flex flex-col justify-center gap-4 lg:gap-3 mt-[26px]">
-      <div className="flex items-center gap-3">
+    <div className="w-full lg:w-[540px] flex flex-col justify-center gap-4 lg:gap-3 mt-[26px]">
+      <div className="flex flex-col lg:flex-row items-center gap-3">
         <Input
           type="url"
           placeholder={t("buttonPlaceholder")}
-          className="w-[65%] h-[40px]"
+          className="w-full lg:w-[65%] h-[40px]"
           value={urlValue}
           onChange={(e) => handleUrlChange(e)}
         />
 
         <Combobox
-          className="w-[35%]"
+          className="w-full lg:w-[35%]"
           classNameOpenMenu="w-[200px]  max-h-[342px] overflow-y-auto"
           placeholder="Selecione o idioma"
           options={languageCode}

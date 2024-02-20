@@ -9,8 +9,8 @@
     "loading": "Carregando..."
   },
   "Home": {
-    "title": "Transcreva vídeos gratuitamente",
-    "description": "Sistema de transcrição de vídeos do Youtube alimentado por inteligência artificial",
+    "title": "Transcrição de vídeos do YouTube com IA",
+    "description": "Obtenha transcrições precisas e rápidas para qualquer vídeo do Youtube em poucos cliques",
     "button": "Iniciar transcrição",
     "buttonPlaceholder": "Adicione a URL do vídeo aqui",
     "subtitle": "Simples e rápido",

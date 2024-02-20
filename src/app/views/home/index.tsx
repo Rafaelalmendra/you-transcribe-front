@@ -26,7 +26,7 @@ const HomeView = () => {
         {t("title")}
       </h1>
 
-      <p className="max-w-auto lg:max-w-[651px] text-center text-[16px] lg:text-[1.5rem] light:text-[#71717A] dark:text-[#A1A1AA] mb-5">
+      <p className="max-w-auto lg:max-w-[748px] text-center text-[16px] lg:text-[1.5rem] light:text-[#71717A] dark:text-[#A1A1AA] mb-5">
         {t("description")}
       </p>
 
