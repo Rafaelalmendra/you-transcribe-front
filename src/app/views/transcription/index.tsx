@@ -1,4 +1,4 @@
-import { TranscriptionTabs } from "components";
+import { ShareButton, TranscriptionTabs } from "components";
 
 type TranscriptionProps = {
   id: string;
@@ -8,7 +8,7 @@ const TranscriptionView = ({ id }: TranscriptionProps) => {
   return (
     <div className="w-full min-h-screen flex flex-col items-center px-4 xl:px-0 pt-12 2xl:pt-0">
       <div className="w-full lg:w-[820px] flex flex-col items-center px-4 xl:px-0 mt-[18px] lg:mt-[3.625rem]">
-        <div className="w-full h-[184px] lg:h-[424px] bg-slate-600">
+        <div className="relative w-full h-[184px] lg:h-[424px] bg-slate-600">
           <iframe
             width="100%"
             height="100%"
@@ -17,6 +17,8 @@ const TranscriptionView = ({ id }: TranscriptionProps) => {
             allow="autoplay; encrypted-media"
             allowFullScreen
           />
+
+          <ShareButton />
         </div>
 
         <TranscriptionTabs id={id} />

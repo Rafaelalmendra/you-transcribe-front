@@ -36,7 +36,8 @@
     "loadingText1": "This process may take some time",
     "loadingText2": "We are almost there",
     "loadingText3": "How about a cup of coffee in the meantime?",
-    "loadingText4": "Take your time and watch the video above"
+    "loadingText4": "Take your time and watch the video above",
+    "linkCopied": "Link copied to clipboard"
   },
   "Languages": {
     "en": "English",
