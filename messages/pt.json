@@ -21,7 +21,8 @@
     "free": "Gratuito",
     "freeDescription": "Sem custos, sem limites, sem pegadinhas. Totalmente gratuito.",
     "emptyUrl": "Digite a URL e o idioma do vídeo do Youtube",
-    "invalidUrl": "Digite uma URL do Youtube válida"
+    "invalidUrl": "Digite uma URL do Youtube válida",
+    "selectLanguage": "Selecione o idioma"
   },
   "Transcription": {
     "transcription": "Transcrição",

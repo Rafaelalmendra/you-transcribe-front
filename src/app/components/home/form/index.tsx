@@ -13,6 +13,8 @@ import { Input, Button, ButtonLoading, Combobox } from "components";
 
 // icons
 import { PlayCircle } from "lucide-react";
+
+// mocks
 import { LanguageCodeMock } from "mocks";
 
 const FormHome = () => {
@@ -69,7 +71,7 @@ const FormHome = () => {
         <Combobox
           className="w-full lg:w-[35%]"
           classNameOpenMenu="w-[200px]  max-h-[342px] overflow-y-auto"
-          placeholder="Selecione o idioma"
+          placeholder={t("selectLanguage")}
           options={languageCode}
           value={languageValue}
           setValue={setLanguageValue}

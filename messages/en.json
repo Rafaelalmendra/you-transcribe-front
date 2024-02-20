@@ -21,7 +21,8 @@
     "free": "Free",
     "freeDescription": "No costs, no limits, no catches. Completely free.",
     "emptyUrl": "Enter the URL of the Youtube video",
-    "invalidUrl": "Enter a valid Youtube URL"
+    "invalidUrl": "Enter a valid Youtube URL",
+    "selectLanguage": "Select the language"
   },
   "Transcription": {
     "transcription": "Transcription",
