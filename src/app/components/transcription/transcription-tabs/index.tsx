@@ -28,9 +28,9 @@ const TranscriptionTabs = ({ id }: TranscriptionProps) => {
   const searchParams = useSearchParams();
   const t = useTranslations("Transcription");
 
-  const { data, isLoading, isSuccess, isError } = useQuery({
+  const { data, isLoading, isRefetching, isSuccess, isError } = useQuery({
     queryKey: ["transcriptionData", id],
-    queryFn: async () => await getTranscriptionData(),
+    queryFn: () => getTranscriptionData(),
   });
 
   const getTranscriptionData = async () => {
@@ -61,10 +61,12 @@ const TranscriptionTabs = ({ id }: TranscriptionProps) => {
       defaultValue="transcription"
       className="w-full mt-[18px] flex flex-col items-center justify-center"
     >
-      <TabsList className="flex items-center justify-center">
-        <TabsTrigger value="transcription">{t("transcription")}</TabsTrigger>
-        <TabsTrigger value="resume">{t("resume")}</TabsTrigger>
-      </TabsList>
+      {!isLoading && !isRefetching && (
+        <TabsList className="flex items-center justify-center">
+          <TabsTrigger value="transcription">{t("transcription")}</TabsTrigger>
+          <TabsTrigger value="resume">{t("resume")}</TabsTrigger>
+        </TabsList>
+      )}
 
       <TabsContent value="transcription" className="mt-[20px]">
         <TranscriptionTab
@@ -72,6 +74,7 @@ const TranscriptionTabs = ({ id }: TranscriptionProps) => {
           isError={isError}
           isLoading={isLoading}
           isSuccess={isSuccess}
+          isRefetching={isRefetching}
         />
       </TabsContent>
 

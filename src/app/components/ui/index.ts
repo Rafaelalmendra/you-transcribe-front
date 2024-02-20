@@ -5,6 +5,7 @@ export * from "./button";
 export * from "./command";
 export * from "./popover";
 export * from "./toaster";
+export * from "./skeleton";
 export * from "./carousel";
 export * from "./combobox";
 export * from "./dropdown-menu";

@@ -10,6 +10,7 @@ type TranscriptionTabProps = {
   isError: boolean;
   isLoading: boolean;
   isSuccess: boolean;
+  isRefetching: boolean;
 };
 
 const TranscriptionTab = ({
@@ -17,16 +18,17 @@ const TranscriptionTab = ({
   isError,
   isLoading,
   isSuccess,
+  isRefetching,
 }: TranscriptionTabProps) => {
   const t = useTranslations("Transcription");
 
   return (
     <div className="mb-[64px]">
-      {isLoading && <TranscriptionLoading />}
+      {(isLoading || isRefetching) && <TranscriptionLoading />}
 
-      {!isLoading && isError && <TranscriptionError />}
+      {!isLoading && !isRefetching && isError && <TranscriptionError />}
 
-      {!isLoading && isSuccess && data && (
+      {!isLoading && !isRefetching && isSuccess && data && (
         <p className="text-justify text-lg dark:text-slate-300">{data.text}</p>
       )}
     </div>

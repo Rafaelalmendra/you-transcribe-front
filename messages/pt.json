@@ -31,7 +31,12 @@
     "tryAgain": "Tente novamente mais tarde",
     "errorTitle": "Oops! Algo deu errado ao carregar a transcrição.",
     "errorDescription": "Tente novamente mais tarde ou recarregue a página",
-    "reloadPage": "Recarregar página"
+    "reloadPage": "Recarregar página",
+    "loadingTitle": "Estamos construindo sua transcrição...",
+    "loadingText1": "Este processo pode levar um tempo",
+    "loadingText2": "Estamos quase lá",
+    "loadingText3": "Que tal um cafézinho enquanto isso?",
+    "loadingText4": "Aproveite o tempo e assista o vídeo acima"
   },
   "Languages": {
     "en": "Inglês",
