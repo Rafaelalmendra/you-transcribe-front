@@ -21,12 +21,12 @@ const HomeView = () => {
   const benefitsMock = BenefitsMock();
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center px-4 xl:px-0">
-      <h1 className="text-[2rem] lg:text-[52px] text-center font-bold light:text-[#09090B] dark:text-[#FAFAFA] mb-[0.125rem]">
+    <div className="flex flex-col items-center px-4 xl:px-0 mt-[82px]">
+      <h1 className="text-[2rem] lg:text-[3rem] text-center font-bold light:text-[#09090B] dark:text-[#FAFAFA] mb-[0.125rem]">
         {t("title")}
       </h1>
 
-      <p className="max-w-auto lg:max-w-[748px] text-center text-[16px] lg:text-[22px] light:text-[#71717A] dark:text-[#A1A1AA] mb-5">
+      <p className="max-w-auto lg:max-w-[584px] text-center text-[16px] lg:text-[20px] light:text-[#71717A] dark:text-[#A1A1AA] mb-5">
         {t("description")}
       </p>
 
@@ -49,7 +49,7 @@ const HomeView = () => {
         ))}
       </div>
 
-      <Carousel className="max-w-xs lg:hidden mt-[42px] px-4">
+      <Carousel className="max-w-xs lg:hidden mt-[48px] px-4">
         <CarouselContent>
           {benefitsMock.map((item) => (
             <CarouselItem key={item.id}>
@@ -65,7 +65,7 @@ const HomeView = () => {
         <CarouselNext className="pr-4" />
       </Carousel>
 
-      <div className="absolute z-[-1] w-full h-full">
+      <div className="absolute bottom-0 z-[-1] w-full h-full">
         <Image fill src="/images/bg-vector.svg" alt="Vector background" />
       </div>
     </div>
