@@ -5,7 +5,8 @@
     "system": "Sistema",
     "portuguese": "Português",
     "english": "Inglês",
-    "footer": "Desenvolvido por"
+    "footer": "Desenvolvido por",
+    "loading": "Carregando..."
   },
   "Home": {
     "title": "Transcreva vídeos gratuitamente",
@@ -21,5 +22,11 @@
     "freeDescription": "Sem custos, sem limites, sem pegadinhas. Totalmente gratuito.",
     "emptyUrl": "Digite a URL do vídeo do Youtube",
     "invalidUrl": "Digite uma URL do Youtube válida"
+  },
+  "Transcription": {
+    "transcription": "Transcrição",
+    "resume": "Resumo",
+    "error": "Erro ao transcrever o vídeo",
+    "tryAgain": "Tente novamente mais tarde"
   }
 }

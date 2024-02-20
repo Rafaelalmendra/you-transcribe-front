@@ -1,8 +1,14 @@
 import type { NextPage } from "next";
 import { TranscriptionView } from "views";
 
-const Transcription: NextPage = () => {
-  return <TranscriptionView />;
+type TranscriptionProps = {
+  params: {
+    id: string;
+  };
+};
+
+const Transcription: NextPage<TranscriptionProps> = async ({ params }) => {
+  return <TranscriptionView id={params.id} />;
 };
 
 export default Transcription;

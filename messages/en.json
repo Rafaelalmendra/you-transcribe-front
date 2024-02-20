@@ -5,7 +5,8 @@
     "system": "System",
     "portuguese": "Portuguese",
     "english": "English",
-    "footer": "Developed by"
+    "footer": "Developed by",
+    "loading": "Loading..."
   },
   "Home": {
     "title": "Transcribe videos for free",
@@ -21,5 +22,11 @@
     "freeDescription": "No costs, no limits, no catches. Completely free.",
     "emptyUrl": "Enter the URL of the Youtube video",
     "invalidUrl": "Enter a valid Youtube URL"
+  },
+  "Transcription": {
+    "transcription": "Transcription",
+    "resume": "Resume",
+    "error": "Error transcribing the video",
+    "tryAgain": "Try again later"
   }
 }

@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
+import { LoaderIcon } from "lucide-react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "utils";
+import { useTranslations } from "next-intl";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -52,5 +54,20 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 Button.displayName = "Button";
+
+type ButtonLoadingProps = {
+  className?: string;
+};
+
+export function ButtonLoading({ className }: ButtonLoadingProps) {
+  const t = useTranslations("General");
+
+  return (
+    <Button disabled className={className}>
+      <LoaderIcon className="mr-2 h-4 w-4 animate-spin" />
+      {t("loading")}
+    </Button>
+  );
+}
 
 export { Button, buttonVariants };

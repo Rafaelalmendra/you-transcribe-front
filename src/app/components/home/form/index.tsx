@@ -9,7 +9,7 @@ import { useRouter } from "../../../../navigation";
 import { toast } from "hooks";
 
 // components
-import { Input, Button } from "components";
+import { Input, Button, ButtonLoading } from "components";
 
 // icons
 import { PlayCircle } from "lucide-react";
@@ -19,6 +19,7 @@ const FormHome = () => {
   const t = useTranslations("Home");
   const [inputValue, setInputValue] = useState("");
   const [valueIsValid, setValueIsValid] = useState(true);
+  const [loadingButton, setLoadingButton] = useState(false);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -41,6 +42,8 @@ const FormHome = () => {
       });
     }
 
+    setLoadingButton(true);
+
     const videoId = inputValue.split("v=")[1];
     router.push(`/${videoId}`);
   };
@@ -60,18 +63,26 @@ const FormHome = () => {
         )}
       </div>
 
-      <Button
-        className={`w-full lg:w-auto font-medium ${
-          valueIsValid
-            ? "bg-gradient-to-r from-[#3AC4E2] to-[#E4EBC7] text-[#09090B]"
-            : "bg-gray-400 cursor-not-allowed"
-        } gap-[10px]`}
-        onClick={handleSubmit}
-        disabled={!valueIsValid}
-      >
-        <PlayCircle size={20} />
-        {t("button")}
-      </Button>
+      {!loadingButton && (
+        <Button
+          className={`w-full lg:w-auto font-medium ${
+            valueIsValid
+              ? "bg-gradient-to-r from-[#3AC4E2] to-[#E4EBC7] text-[#09090B]"
+              : "bg-gray-400 cursor-not-allowed"
+          } gap-[10px]`}
+          onClick={handleSubmit}
+          disabled={!valueIsValid}
+        >
+          <PlayCircle size={20} />
+          {t("button")}
+        </Button>
+      )}
+
+      {loadingButton && (
+        <ButtonLoading
+          className={`w-full lg:w-auto font-medium bg-gradient-to-r from-[#3AC4E2] to-[#E4EBC7] text-[#09090B] gap-[10px]`}
+        />
+      )}
     </div>
   );
 };
