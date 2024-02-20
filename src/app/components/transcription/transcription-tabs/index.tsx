@@ -28,7 +28,7 @@ const TranscriptionTabs = ({ id }: TranscriptionProps) => {
   const searchParams = useSearchParams();
   const t = useTranslations("Transcription");
 
-  const { data, isLoading, isSuccess } = useQuery({
+  const { data, isLoading, isSuccess, isError } = useQuery({
     queryKey: ["transcriptionData", id],
     queryFn: async () => await getTranscriptionData(),
   });
@@ -69,6 +69,7 @@ const TranscriptionTabs = ({ id }: TranscriptionProps) => {
       <TabsContent value="transcription" className="mt-[20px]">
         <TranscriptionTab
           data={data}
+          isError={isError}
           isLoading={isLoading}
           isSuccess={isSuccess}
         />

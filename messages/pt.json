@@ -28,7 +28,10 @@
     "transcription": "Transcrição",
     "resume": "Resumo",
     "error": "Erro ao transcrever o vídeo",
-    "tryAgain": "Tente novamente mais tarde"
+    "tryAgain": "Tente novamente mais tarde",
+    "errorTitle": "Oops! Algo deu errado ao carregar a transcrição.",
+    "errorDescription": "Tente novamente mais tarde ou recarregue a página",
+    "reloadPage": "Recarregar página"
   },
   "Languages": {
     "en": "Inglês",

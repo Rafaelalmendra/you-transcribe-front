@@ -28,7 +28,10 @@
     "transcription": "Transcription",
     "resume": "Resume",
     "error": "Error transcribing the video",
-    "tryAgain": "Try again later"
+    "tryAgain": "Try again later",
+    "errorTitle": "Oops! Something went wrong loading the transcript.",
+    "errorDescription": "Please try again later or reload the page.",
+    "reloadPage": "Reload the page"
   },
   "Languages": {
     "en": "English",

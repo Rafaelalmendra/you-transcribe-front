@@ -11,8 +11,8 @@ const Footer = ({ hasBackground }: FooterProps) => {
     <footer
       className={`w-full h-[4.75rem] flex items-center justify-center ${
         hasBackground
-          ? "bg-slate-100 dark:bg-[#09090B] shadow-2xl"
-          : "transparent"
+          ? "border-t-[1px] border-[#e9e9e9] bg-[#FFFFFF] dark:border-[#27272A]  dark:bg-[#020817]"
+          : "bg-transparent"
       } `}
     >
       <div className="max-w-[1280px] w-full flex items-center justify-between text-[#A1A1AA]n">
