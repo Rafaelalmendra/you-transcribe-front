@@ -19,7 +19,7 @@ const TranscriptionTab = ({
   const t = useTranslations("Transcription");
 
   return (
-    <div>
+    <div className="mb-[138px]">
       {isLoading && <TranscriptionLoading />}
 
       {!isLoading && isSuccess && data && (

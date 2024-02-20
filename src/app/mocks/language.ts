@@ -5,7 +5,6 @@ const LanguageCodeMock = () => {
 
   const languageCode = [
     { label: t("pt"), value: "pt" },
-    { label: t("en"), value: "en" },
     { label: t("en_us"), value: "en_us" },
     { label: t("en_au"), value: "en_au" },
     { label: t("en_uk"), value: "en_uk" },
