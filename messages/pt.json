@@ -20,7 +20,7 @@
     "efficientDescription": "Uma ferramenta simples que entrega o que promete com total eficiência.",
     "free": "Gratuito",
     "freeDescription": "Sem custos, sem limites, sem pegadinhas. Totalmente gratuito.",
-    "emptyUrl": "Digite a URL do vídeo do Youtube",
+    "emptyUrl": "Digite a URL e o idioma do vídeo do Youtube",
     "invalidUrl": "Digite uma URL do Youtube válida"
   },
   "Transcription": {
@@ -28,5 +28,27 @@
     "resume": "Resumo",
     "error": "Erro ao transcrever o vídeo",
     "tryAgain": "Tente novamente mais tarde"
+  },
+  "Languages": {
+    "en": "Inglês",
+    "en_au": "Inglês Australiano",
+    "en_uk": "Inglês Britânico",
+    "en_us": "Inglês Americano",
+    "es": "Espanhol",
+    "fr": "Francês",
+    "de": "Alemão",
+    "it": "Italiano",
+    "pt": "Português",
+    "nl": "Holandês",
+    "hi": "Hindi",
+    "ja": "Japonês",
+    "zh": "Chinês",
+    "fi": "Finlandês",
+    "ko": "Coreano",
+    "pl": "Polonês",
+    "ru": "Russo",
+    "tr": "Turco",
+    "uk": "Ucraniano",
+    "vi": "Vietnamita"
   }
 }

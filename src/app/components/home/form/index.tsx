@@ -9,21 +9,28 @@ import { useRouter } from "../../../../navigation";
 import { toast } from "hooks";
 
 // components
-import { Input, Button, ButtonLoading } from "components";
+import { Input, Button, ButtonLoading, Combobox } from "components";
 
 // icons
 import { PlayCircle } from "lucide-react";
+import { LanguageCodeMock } from "mocks";
 
 const FormHome = () => {
   const router = useRouter();
   const t = useTranslations("Home");
-  const [inputValue, setInputValue] = useState("");
+  const languageCode = LanguageCodeMock();
+
+  // values
+  const [urlValue, setUrlValue] = useState("");
+  const [languageValue, setLanguageValue] = useState("");
+
+  // general-states
   const [valueIsValid, setValueIsValid] = useState(true);
   const [loadingButton, setLoadingButton] = useState(false);
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setInputValue(value);
+    setUrlValue(value);
 
     const linkRegex = /^(https?\:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/;
     setValueIsValid(linkRegex.test(value));
@@ -34,7 +41,7 @@ const FormHome = () => {
   };
 
   const handleSubmit = async () => {
-    if (inputValue === "") {
+    if (urlValue === "" || languageValue === "") {
       return toast({
         title: t("emptyUrl"),
         variant: "destructive",
@@ -44,28 +51,34 @@ const FormHome = () => {
 
     setLoadingButton(true);
 
-    const videoId = inputValue.split("v=")[1];
-    router.push(`/${videoId}`);
+    const videoId = urlValue.split("v=")[1];
+    router.push(`/${videoId}?lang=${languageValue}`);
   };
 
   return (
-    <div className="w-full flex flex-col lg:flex-row justify-center gap-4 lg:gap-2 mt-[26px]">
-      <div className="flex flex-col">
+    <div className="w-[540px] flex flex-col justify-center gap-4 lg:gap-3 mt-[26px]">
+      <div className="flex items-center gap-3">
         <Input
           type="url"
           placeholder={t("buttonPlaceholder")}
-          className="w-full lg:w-[410px] h-[40px]"
-          value={inputValue}
-          onChange={(e) => handleInputChange(e)}
+          className="w-[65%] h-[40px]"
+          value={urlValue}
+          onChange={(e) => handleUrlChange(e)}
         />
-        {!valueIsValid && (
-          <p className="text-red-400 text-xs mt-2">{t("invalidUrl")}</p>
-        )}
+
+        <Combobox
+          className="w-[35%]"
+          classNameOpenMenu="w-[200px]  max-h-[342px] overflow-y-auto"
+          placeholder="Selecione o idioma"
+          options={languageCode}
+          value={languageValue}
+          setValue={setLanguageValue}
+        />
       </div>
 
       {!loadingButton && (
         <Button
-          className={`w-full lg:w-auto font-medium ${
+          className={`w-full font-medium ${
             valueIsValid
               ? "bg-gradient-to-r from-[#3AC4E2] to-[#E4EBC7] text-[#09090B]"
               : "bg-gray-400 cursor-not-allowed"

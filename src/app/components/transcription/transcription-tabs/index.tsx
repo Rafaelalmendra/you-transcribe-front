@@ -1,5 +1,6 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 
@@ -24,6 +25,7 @@ type TranscriptionProps = {
 };
 
 const TranscriptionTabs = ({ id }: TranscriptionProps) => {
+  const searchParams = useSearchParams();
   const t = useTranslations("Transcription");
 
   const { data, isLoading, isSuccess } = useQuery({
@@ -32,10 +34,13 @@ const TranscriptionTabs = ({ id }: TranscriptionProps) => {
   });
 
   const getTranscriptionData = async () => {
+    const lang = searchParams.get("lang");
+
     try {
       const response = await api.get(`/transcription`, {
         params: {
           videoId: id,
+          lang: lang,
         },
       });
       if (!response) return;
