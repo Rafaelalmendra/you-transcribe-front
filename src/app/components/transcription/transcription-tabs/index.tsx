@@ -31,6 +31,10 @@ const TranscriptionTabs = ({ id }: TranscriptionProps) => {
   const { data, isLoading, isRefetching, isSuccess, isError } = useQuery({
     queryKey: ["transcriptionData", id],
     queryFn: () => getTranscriptionData(),
+    refetchOnWindowFocus: false,
+    refetchOnMount: true,
+    refetchOnReconnect: true,
+    retry: true,
   });
 
   const getTranscriptionData = async () => {
@@ -64,7 +68,9 @@ const TranscriptionTabs = ({ id }: TranscriptionProps) => {
       {!isLoading && !isRefetching && (
         <TabsList className="flex items-center justify-center">
           <TabsTrigger value="transcription">{t("transcription")}</TabsTrigger>
-          <TabsTrigger value="resume">{t("resume")}</TabsTrigger>
+          <TabsTrigger value="resume" disabled>
+            {t("resume")}
+          </TabsTrigger>
         </TabsList>
       )}
 

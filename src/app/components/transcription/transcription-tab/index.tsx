@@ -23,12 +23,12 @@ const TranscriptionTab = ({
   const t = useTranslations("Transcription");
 
   return (
-    <div className="mb-[64px]">
+    <div className="mb-[124px]">
       {(isLoading || isRefetching) && <TranscriptionLoading />}
 
       {!isLoading && !isRefetching && isError && <TranscriptionError />}
 
-      {!isLoading && !isRefetching && isSuccess && data && (
+      {!isLoading && !isRefetching && data && (
         <p className="text-justify text-lg dark:text-slate-300">{data.text}</p>
       )}
     </div>
