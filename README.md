@@ -1,4 +1,8 @@
-# About
+# 
+
+https://github.com/Rafaelalmendra/you-transcribe-front/assets/70551452/e8cfce8b-a5c5-4df2-8dfe-1146d6297461
+
+About
 
 A modern and fast web application that allows you to transcribe YouTube videos and generate summaries with artificial intelligence.
 
